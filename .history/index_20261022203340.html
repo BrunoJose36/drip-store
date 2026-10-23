@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Store - Bruno</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+      :root {
+        --rosa: #c92071;
+        --cinza: #f5f5f5;
+        --amarelo: #f6aa1c;
+      }
+      body {
+        background: #f9f8fe;
+      }
+      img {
+        max-width: 100%;
+      }
+      header {
+        padding: 24px 100px 0;
+        background: white;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .header-main {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+      .logo {
+        color: var(--rosa);
+        font-weight: 800;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .logo-icon {
+        width: 30px;
+        height: 30px;
+        background: var(--rosa);
+        color: white;
+        display: grid;
+        place-items: center;
+        border-radius: 6px;
+      }
+      .search-box {
+        flex: 1;
+        max-width: 560px;
+        background: var(--cinza);
+        border-radius: 8px;
+        padding: 12px 16px;
+        display: flex;
+      }
+      .search-box input {
+        border: none;
+        background: transparent;
+        width: 100%;
+        outline: none;
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-left: auto;
+      }
+      .link-cad {
+        color: #474747;
+        text-decoration: underline;
+        font-size: 14px;
+      }
+      .btn-entrar {
+        background: var(--rosa);
+        color: white;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 8px;
+        font-weight: 700;
+      }
+      .cart {
+        position: relative;
+      }
+      .cart span {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: var(--rosa);
+        color: white;
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+      nav {
+        display: flex;
+        gap: 28px;
+        padding: 20px 0 16px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #474747;
+        font-size: 14px;
+        padding-bottom: 6px;
+      }
+      nav a.active {
+        color: var(--rosa);
+        font-weight: 700;
+        border-bottom: 2px solid var(--rosa);
+      }
+      .hero {
+        min-height: 600px;
+        background: var(--cinza);
+        display: flex;
+        align-items: center;
+        padding: 0 100px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-left {
+        max-width: 500px;
+      }
+      .hero-left h4 {
+        color: var(--amarelo);
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .hero-left h1 {
+        font-size: 64px;
+        line-height: 66px;
+        font-weight: 800;
+        color: #1f1f1f;
+        margin: 16px 0;
+      }
+      .hero-left p {
+        color: #474747;
+        line-height: 28px;
+        margin-bottom: 28px;
+      }
+      .btn-rosa {
+        background: var(--rosa);
+        color: white;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .hero-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .hero-right img {
+        width: 620px;
+        height: auto;
+        transform: rotate(-8deg);
+        object-fit: contain;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+        background: transparent;
+      }
+      .carousel {
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #cccccc;
+      }
+      .dot.active {
+        background: var(--rosa);
+      }
+      .colecoes {
+        padding: 40px 100px;
+      }
+      .colecoes h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+      .cards-3 {
+        display: flex;
+        gap: 14px;
+      }
+      .card-3 {
+        flex: 1;
+        background: #d8e6fd;
+        border-radius: 8px;
+        padding: 24px 24px 0 24px;
+        position: relative;
+        overflow: hidden;
+        height: 251px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .card-3 h3 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px;
+        margin: 10px 0 18px;
+      }
+      .tag {
+        background: #e7ff86;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .btn-branco {
+        background: white;
+        color: var(--rosa);
+        border: none;
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-weight: 700;
+      }
+      .card-3 img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        height: 100%;
+        object-fit: contain;
+        object-position: right bottom;
+        background: white;
+        transform: rotate(0deg);
+      }
+      .icones {
+        padding: 20px 100px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .icones-lista {
+        display: flex;
+        gap: 36px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .icone-circle {
+        width: 104px;
+        height: 104px;
+        background: white;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        font-size: 36px;
+      }
+      .produtos {
+        padding: 20px 100px 50px;
+      }
+      .prod-header {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin: 0 auto 20px;
+      }
+      .prod-header a {
+        color: var(--rosa);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1240px;
+        margin: 0 auto;
+      }
+      .prod-card {
+        background: white;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 0 0 1px #eee;
+      }
+      .prod-img {
+        height: 220px;
+        background: white;
+        position: relative;
+        display: grid;
+        place-items: center;
+        padding: 16px;
+      }
+      .prod-img span {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: #e7ff86;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .prod-img img {
+        width: 90%;
+        transform: rotate(-15deg);
+      }
+      .prod-info {
+        padding: 12px;
+      }
+      .prod-info .cat {
+        font-size: 12px;
+        color: #8f8f8f;
+      }
+      .prod-info .nome {
+        font-size: 16px;
+        margin: 4px 0 6px;
+      }
+      .prod-info del {
+        color: #8f8f8f;
+      }
+      .prod-info b {
+        color: #1f1f1f;
+        margin-left: 6px;
+      }
+      .oferta {
+        padding: 70px 100px;
+        background: white;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+      .oferta-img {
+        position: relative;
+        width: 573px;
+        height: 330px;
+        flex-shrink: 0;
+      }
+      .oferta-bg {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #ede3ff 0%, #f9f8fe 100%);
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        position: absolute;
+      }
+      .oferta-img img {
+        position: absolute;
+        width: 100%;
+        bottom: -20px;
+        left: 0;
+      }
+      .oferta-texto {
+        max-width: 500px;
+      }
+      .oferta-texto .small {
+        color: var(--rosa);
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .oferta-texto h2 {
+        font-size: 44px;
+        line-height: 48px;
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+      footer {
+        background: #1f1f1f;
+        color: white;
+        padding: 50px 100px 20px;
+      }
+      .footer-grid {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      .footer-grid p {
+        color: #cccccc;
+        font-size: 14px;
+        line-height: 30px;
+      }
+      .copy {
+        border-top: 1px solid #333;
+        max-width: 1240px;
+        margin: 40px auto 0;
+        padding: 20px 0;
+        text-align: center;
+        color: #cccccc;
+        font-size: 12px;
+      }
+      @media (max-width: 1100px) {
+        header,
+        .hero,
+        .colecoes,
+        .icones,
+        .produtos,
+        .oferta,
+        footer {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .header-main {
+          flex-wrap: wrap;
+        }
+        .search-box {
+          order: 3;
+          max-width: 100%;
+          margin-left: 0;
+        }
+        .hero {
+          min-height: 681px;
+          background: var(--cinza);
+          display: flex;
+          align-items: center;
+          padding: 0 100px 0 100px;
+          position: relative;
+          overflow: hidden;
+          justify-content: space-between;
+        }
+        .hero-left h1 {
+          font-size: 40px;
+          line-height: 42px;
+        }
+        .hero-right img {
+          width: 620px;
+          height: auto;
+          transform: rotate(0deg);
+          object-fit: contain;
+          filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+        }
+        .cards-3 {
+          flex-direction: column;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .oferta {
+          flex-direction: column;
+          padding: 40px 24px;
+        }
+        .oferta-img {
+          width: 100%;
+          height: 260px;
+        }
+      }
+      @media (max-width: 600px) {
+        header {
+          padding: 16px 16px 0;
+        }
+        .link-cad {
+          display: none;
+        }
+        .hero-left h1 {
+          font-size: 32px;
+          line-height: 32px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .prod-img {
+          height: 280px;
+        }
+        .footer-grid {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-main">
+        <div class="logo">
+          <div class="logo-icon">≫</div>
+          Digital Store
+        </div>
+        <div class="search-box">
+          <input placeholder="Pesquisar produto..." /> 🔍
+        </div>
+        <div class="right">
+          <span class="link-cad">Cadastre-se</span
+          ><button class="btn-entrar">Entrar</button>
+          <div class="cart">🛒<span>2</span></div>
+        </div>
+      </div>
+      <nav>
+        <a class="active" href="#">Home</a><a href="#">Produtos</a
+        ><a href="#">Categorias</a><a href="#">Meus Pedidos</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-left">
+        <h4>Melhores ofertas personalizadas</h4>
+        <h1>Queima de<br />estoque Nike 🔥</h1>
+        <p>
+          Consequat culpa exercitation mollit nisi excepteur do do tempor
+          laboris eiusmod irure consectetur.
+        </p>
+        <button class="btn-rosa">Ver Ofertas</button>
+      </div>
+      <div class="hero-right"><img src="nike.jpg" alt="Nike" /></div>
+      <div class="carousel">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+    <section class="colecoes">
+      <h2>Coleções em destaque</h2>
+      <div class="cards-3">
+        <div class="card-3">
+          <div style="z-index: 2">
+            <span class="tag">30% OFF</span>
+            <h3>Novo drop<br />Supreme</h3>
+            <button class="btn-branco">Comprar</button>
+          </div>
+          <img src="supreme.jpg" />
+        </div>
+        <div class="card-3">
+          <div style="z-index: 2">
+            <span class="tag">30% OFF</span>
+            <h3>Coleção<br />Adidas</h3>
+            <button class="btn-branco">Comprar</button>
+          </div>
+          <img src="adidas.jpg" style="width: 220px" />
+        </div>
+        <div class="card-3">
+          <div style="z-index: 2">
+            <span class="tag">30% OFF</span>
+            <h3>Novo<br />Beats Bass</h3>
+            <button class="btn-branco">Comprar</button>
+          </div>
+          <img src="beats.jpg" style="width: 180px" />
+        </div>
+      </div>
+    </section>
+    <section class="icones">
+      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 20px">
+        Coleções em destaque
+      </h2>
+      <div class="icones-lista">
+        <div>
+          <div class="icone-circle">👕</div>
+          <p style="margin-top: 10px; font-weight: 700; text-align: center">
+            Camisetas
+          </p>
+        </div>
+        <div>
+          <div class="icone-circle">👖</div>
+          <p style="margin-top: 10px; text-align: center">Calças</p>
+        </div>
+        <div>
+          <div class="icone-circle">🧢</div>
+          <p style="margin-top: 10px; text-align: center">Bonés</p>
+        </div>
+        <div>
+          <div class="icone-circle">🎧</div>
+          <p style="margin-top: 10px; text-align: center">Headphones</p>
+        </div>
+        <div>
+          <div class="icone-circle">👟</div>
+          <p style="margin-top: 10px; text-align: center">Tênis</p>
+        </div>
+      </div>
+    </section>
+    <section class="produtos">
+      <div class="prod-header">
+        <h2>Produtos em alta</h2>
+        <a href="#">Ver todos →</a>
+      </div>
+      <div class="grid">
+        <div class="prod-card">
+          <div class="prod-img">
+            <span>30% OFF</span><img src="kswiss.jpg" />
+          </div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img">
+            <span>30% OFF</span><img src="kswiss.jpg" />
+          </div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="kswiss.jpg" /></div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="kswiss.jpg" /></div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="kswiss.jpg" /></div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="kswiss.jpg" /></div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="kswiss.jpg" /></div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img"><img src="kswiss.jpg" /></div>
+          <div class="prod-info">
+            <p class="cat">Tênis</p>
+            <p class="nome">K-Swiss V8 - Masculino</p>
+            <p><del>$200</del><b>$100</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="oferta">
+      <div class="oferta-img">
+        <div class="oferta-bg"></div>
+        <img src="airjordan.jpg" />
+      </div>
+      <div class="oferta-texto">
+        <p class="small">Oferta especial</p>
+        <h2>Air Jordan edição de colecionador</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button class="btn-rosa">Ver Oferta</button>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-grid">
+        <div style="max-width: 300px">
+          <div
+            style="display: flex; gap: 8px; font-size: 26px; font-weight: 700"
+          >
+            <div
+              style="
+                width: 28px;
+                height: 28px;
+                background: white;
+                color: #1f1f1f;
+                display: grid;
+                place-items: center;
+                border-radius: 6px;
+              "
+            >
+              ≫
+            </div>
+            Digital Store
+          </div>
+          <p style="margin-top: 20px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+        </div>
+        <div>
+          <h4>Informação</h4>
+          <p>
+            Sobre Drip Store<br />Segurança<br />Wishlist<br />Blog<br />Trabalhe
+            conosco<br />Meus Pedidos
+          </p>
+        </div>
+        <div>
+          <h4>Categorias</h4>
+          <p>Camisetas<br />Calças<br />Bonés<br />Headphones<br />Tênis</p>
+        </div>
+        <div style="max-width: 220px">
+          <h4>Contato</h4>
+          <p>
+            Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE,
+            60150-161<br /><br />(85) 3051-3411
+          </p>
+        </div>
+      </div>
+      <div class="copy">@ 2022 Digital College</div>
+    </footer>
+  </body>
+</html>
