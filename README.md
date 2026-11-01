@@ -10,10 +10,14 @@ Projeto de e-commerce desenvolvido para o curso da Digital College.
 - HTML5
 - CSS3
 - Design Responsivo
+- jS
+
 
 ### ✨ Funcionalidades
 - Banner Queima de Estoque Nike
 - Cards de produtos (Supreme, Adidas, Beats, Nike)
 - Layout responsivo para mobile
+- CARRINHO COM LOCALSTORE
+- 
 
 Feito por Bruno Jose - Fortaleza/CE
