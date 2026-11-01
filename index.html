@@ -2,10 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Store - Drip Store</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -30,7 +27,6 @@
         max-width: 100%;
         display: block;
       }
-      /* HEADER */
       header {
         padding: 28px 100px 0;
         background: white;
@@ -135,7 +131,6 @@
         font-weight: 700;
         border-bottom: 2px solid var(--rosa);
       }
-      /* HERO */
       .hero {
         background: var(--cinza);
         display: flex;
@@ -189,41 +184,9 @@
       }
       .hero-right img {
         width: 700px;
-        height: auto;
         transform: rotate(-14deg) translateY(10px);
         filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.12));
       }
-      .ornamento {
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        top: 50px;
-        right: 40px;
-        background-image: radial-gradient(#f6aa1c 3px, transparent 3px);
-        background-size: 18px 18px;
-        opacity: 0.6;
-      }
-      .carousel {
-        position: absolute;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 8px;
-        z-index: 5;
-      }
-      .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #cccccc;
-      }
-      .dot.active {
-        background: var(--rosa);
-      }
-      /* COLECOES */
-      /* COLECOES - AJUSTE FINAL IGUAL FIGMA */
-      /* COLEÇÕES - RESET FINAL - IGUAL FIGMA */
       .colecoes {
         padding: 38px 100px 20px;
         background: white;
@@ -231,7 +194,6 @@
       .colecoes h2 {
         font-size: 24px;
         font-weight: 700;
-        color: #1f1f1f;
         margin-bottom: 20px;
       }
       .cards-3 {
@@ -249,7 +211,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
       }
       .card-3 .tag {
         background: #e7ff86;
@@ -258,7 +219,6 @@
         font-size: 14px;
         font-weight: 700;
         color: #474747;
-        position: relative;
         z-index: 3;
       }
       .card-3 h3 {
@@ -267,10 +227,8 @@
         line-height: 36px;
         margin: 10px 0 20px;
         color: #1f1f1f;
-        position: relative;
         z-index: 3;
       }
-      .card-3 .btn-branco,
       .card-3 button {
         background: white !important;
         color: #c92071 !important;
@@ -280,21 +238,17 @@
         font-weight: 700;
         font-size: 14px;
         cursor: pointer;
-        position: relative;
         z-index: 3;
       }
       .card-3 img {
         position: absolute !important;
-        z-index: 1 !important;
         object-fit: contain;
-        background: transparent !important;
         bottom: 0;
         right: 0;
       }
       .card-3:nth-child(1) img {
         width: 42%;
         right: 10px;
-        top: auto;
         bottom: 5px;
         height: 75%;
       }
@@ -311,33 +265,6 @@
         bottom: 0;
         height: 90%;
       }
-
-      /* SÓ NO CELULAR */
-      @media (max-width: 768px) {
-        .colecoes {
-          padding: 20px;
-        }
-        .cards-3 {
-          flex-direction: column;
-        }
-        .card-3 {
-          height: 200px;
-        }
-        .card-3:nth-child(1) img {
-          width: 120px;
-          height: auto;
-        }
-        .card-3:nth-child(2) img {
-          width: 150px;
-          height: auto;
-        }
-        .card-3:nth-child(3) img {
-          width: 110px;
-          height: auto;
-        }
-      }
-
-      /* ICONES */
       .icones {
         padding: 100px 100px 50px;
         display: flex;
@@ -348,7 +275,6 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
-        color: #1f1f1f;
       }
       .icones-lista {
         display: flex;
@@ -370,17 +296,7 @@
         place-items: center;
         box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
         font-size: 32px;
-        transition: 0.2s;
       }
-      .icone-circle:hover {
-        transform: scale(1.05);
-      }
-      .icone-item p {
-        font-size: 14px;
-        font-weight: 700;
-        color: #1f1f1f;
-      }
-      /* PRODUTOS */
       .produtos {
         padding: 20px 100px 80px;
         background: #f9f8fe;
@@ -391,16 +307,6 @@
         align-items: center;
         max-width: 1240px;
         margin: 0 auto 20px;
-      }
-      .prod-header h2 {
-        font-size: 24px;
-        font-weight: 700;
-      }
-      .prod-header a {
-        color: var(--rosa);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 18px;
       }
       .grid {
         display: grid;
@@ -413,6 +319,7 @@
         background: transparent;
         border-radius: 0;
         overflow: hidden;
+        cursor: pointer;
       }
       .prod-img {
         height: 321px;
@@ -438,7 +345,6 @@
       .prod-img img {
         width: 80%;
         transform: rotate(-8deg);
-        mix-blend-mode: multiply;
       }
       .prod-info {
         padding: 12px 0 0;
@@ -447,28 +353,17 @@
         font-size: 12px;
         color: #8f8f8f;
         font-weight: 700;
-        letter-spacing: 0.75px;
       }
       .prod-info .nome {
         font-size: 16px;
         color: #1f1f1f;
         margin: 6px 0 8px;
-        line-height: 22px;
-      }
-      .prod-info .preco {
-        font-size: 24px;
       }
       .prod-info .preco del {
         color: #8f8f8f;
         font-size: 16px;
-        text-decoration: line-through;
         margin-right: 8px;
       }
-      .prod-info .preco b {
-        color: #1f1f1f;
-        font-weight: 700;
-      }
-      /* OFERTA */
       .oferta {
         padding: 80px 100px;
         background: white;
@@ -510,23 +405,14 @@
         color: var(--rosa);
         font-size: 14px;
         font-weight: 700;
-        letter-spacing: 0.75px;
         margin-bottom: 16px;
       }
       .oferta-texto h2 {
         font-size: 48px;
         font-weight: 700;
         line-height: 50px;
-        color: #1f1f1f;
         margin-bottom: 20px;
       }
-      .oferta-texto p {
-        color: #474747;
-        font-size: 16px;
-        line-height: 28px;
-        margin-bottom: 30px;
-      }
-      /* FOOTER */
       footer {
         background: #1f1f1f;
         color: white;
@@ -540,78 +426,6 @@
         flex-wrap: wrap;
         gap: 32px;
       }
-      .footer-grid h4 {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 28px;
-      }
-      .footer-grid p,
-      .footer-grid a {
-        color: white;
-        font-size: 16px;
-        line-height: 32px;
-        text-decoration: none;
-        opacity: 0.9;
-      }
-      .footer-grid .desc {
-        max-width: 307px;
-        margin-top: 24px;
-        font-size: 16px;
-        line-height: 26px;
-        opacity: 0.9;
-      }
-      .copy {
-        border-top: 1px solid #333;
-        max-width: 1240px;
-        margin: 56px auto 0;
-        padding: 24px 0;
-        text-align: center;
-        color: white;
-        font-size: 13px;
-        opacity: 0.8;
-      }
-
-      /* RESPONSIVO - CELULAR */
-      /* RESPONSIVO - CELULAR - FIX DO ZOOM */
-      @media (max-width: 768px) {
-        header,
-        .header,
-        .topo,
-        nav {
-          position: relative !important;
-          top: auto !important;
-          left: auto !important;
-          width: 100% !important;
-          z-index: 1 !important;
-        }
-        body {
-          padding-top: 0 !important;
-          overflow-x: hidden;
-        }
-        .hero {
-          flex-direction: column;
-          padding: 20px 20px 40px;
-          text-align: center;
-          margin-top: 0 !important;
-        }
-        .hero-left h1 {
-          font-size: 40px;
-          line-height: 44px;
-        }
-        .hero-right img {
-          width: 100%;
-          max-width: 350px;
-          margin: 20px auto 0;
-          transform: none !important;
-          position: relative !important;
-        }
-        .colecoes {
-          padding: 20px;
-        }
-        .cards-3 {
-          flex-direction: column;
-        }
-      }
       @media (max-width: 1100px) {
         header,
         .hero,
@@ -623,86 +437,13 @@
           padding-left: 24px;
           padding-right: 24px;
         }
-        .header-main {
-          flex-wrap: wrap;
-        }
-        .search-box {
-          order: 3;
-          max-width: 100%;
-          margin-left: 0;
-        }
-        .hero {
-          flex-direction: column;
-          min-height: auto;
-          padding-top: 40px;
-          padding-bottom: 60px;
-          text-align: left;
-        }
-        .hero-left h1 {
-          font-size: 40px;
-          line-height: 40px;
-        }
-        .hero-left p {
-          font-size: 16px;
-          line-height: 26px;
-        }
-        .hero-right img {
-          width: 100%;
-          margin-top: 24px;
-          transform: rotate(-14deg);
-        }
-        .cards-3 {
-          flex-direction: column;
-        }
-        .icones-lista {
-          gap: 20px;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
         .grid {
           grid-template-columns: repeat(2, 1fr);
         }
-        .oferta {
+        .hero {
           flex-direction: column;
-          padding-top: 50px;
-          padding-bottom: 50px;
         }
-        .oferta-img {
-          width: 100%;
-          max-width: 500px;
-          height: 280px;
-        }
-        .oferta-bg {
-          width: 320px;
-          height: 320px;
-        }
-        .oferta-texto h2 {
-          font-size: 32px;
-          line-height: 36px;
-        }
-      }
-      @media (max-width: 600px) {
-        header {
-          padding: 16px 16px 0;
-        }
-        .link-cad {
-          display: none;
-        }
-        nav {
-          gap: 20px;
-          overflow-x: auto;
-        }
-        .hero-left h1 {
-          font-size: 36px;
-          line-height: 38px;
-        }
-        .grid {
-          grid-template-columns: 1fr;
-        }
-        .prod-img {
-          height: 280px;
-        }
-        .footer-grid {
+        .oferta {
           flex-direction: column;
         }
       }
@@ -725,10 +466,8 @@
         </div>
       </div>
       <nav>
-        <a class="active" href="#">Home</a>
-        <a href="#">Produtos</a>
-        <a href="#">Categorias</a>
-        <a href="#">Meus Pedidos</a>
+        <a class="active" href="#">Home</a><a href="#">Produtos</a
+        ><a href="#">Categorias</a><a href="#">Meus Pedidos</a>
       </nav>
     </header>
 
@@ -742,37 +481,26 @@
         </p>
         <button class="btn-rosa">Ver Ofertas</button>
       </div>
-      <div class="hero-right">
-        <div class="ornamento"></div>
-        <img src="nike.png" alt="Nike Air" />
-      </div>
-      <div class="carousel">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
+      <div class="hero-right"><img src="nike.png" alt="Nike Air" /></div>
     </section>
+
     <section class="colecoes">
       <h2>Coleções em destaque</h2>
       <div class="cards-3">
         <div class="card-3">
           <span class="tag">30% OFF</span>
           <h3>Novo drop<br />Supreme</h3>
-          <button class="btn-branco">Comprar</button>
-          <img src="supreme.png" alt="Supreme" />
+          <button>Comprar</button><img src="supreme.png" />
         </div>
         <div class="card-3">
           <span class="tag">30% OFF</span>
           <h3>Coleção<br />Adidas</h3>
-          <button class="btn-branco">Comprar</button>
-          <img src="adidas.png" alt="Adidas" />
+          <button>Comprar</button><img src="adidas.png" />
         </div>
         <div class="card-3">
           <span class="tag">30% OFF</span>
           <h3>Novo<br />Beats Bass</h3>
-          <button class="btn-branco">Comprar</button>
-          <img src="beats.png" alt="Beats" />
+          <button>Comprar</button><img src="beats.png" />
         </div>
       </div>
     </section>
@@ -808,151 +536,218 @@
         <h2>Produtos em alta</h2>
         <a href="#">Ver todos →</a>
       </div>
-      <div class="grid">
-        <div class="prod-card">
-          <div class="prod-img">
-            <span>30% OFF</span><img src="./kswiss.png" />
-          </div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-img">
-            <span>30% OFF</span><img src="./kswiss.png" />
-          </div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-img"><img src="./kswiss.png" /></div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-img"><img src="./kswiss.png" /></div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-img"><img src="./kswiss.png" /></div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-img"><img src="./kswiss.png" /></div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-img"><img src="./kswiss.png" /></div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-img"><img src="./kswiss.png" /></div>
-          <div class="prod-info">
-            <p class="cat">Tênis</p>
-            <p class="nome">K-Swiss V8 - Masculino</p>
-            <p class="preco"><del>$200</del><b>$100</b></p>
-          </div>
-        </div>
-      </div>
+      <div class="grid"></div>
     </section>
 
     <section class="oferta">
       <div class="oferta-img">
         <div class="oferta-bg"></div>
-        <img src="./airjordan.png" alt="Air Jordan" />
+        <img src="./airjordan.png" />
       </div>
       <div class="oferta-texto">
         <p class="small">Oferta especial</p>
         <h2>Air Jordan edição de colecionador</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation
-        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <button class="btn-rosa">Ver Oferta</button>
       </div>
     </section>
 
     <footer>
       <div class="footer-grid">
-        <div style="max-width: 340px">
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              font-size: 28px;
-              font-weight: 700;
-            "
-          >
-            <div
-              style="
-                width: 32px;
-                height: 32px;
-                background: white;
-                color: #1f1f1f;
-                display: grid;
-                place-items: center;
-                border-radius: 8px;
-                font-size: 18px;
-              "
-            >
-              ≫
-            </div>
-            Digital Store
-          </div>
-          <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
-          </p>
-          <p style="margin-top: 24px; letter-spacing: 8px; font-size: 20px">
-            📘 📷 🐦
-          </p>
-        </div>
-        <div>
-          <h4>Informação</h4>
-          <p>
-            Sobre Drip Store<br />Segurança<br />Wishlist<br />Blog<br />Trabalhe
-            conosco<br />Meus Pedidos
-          </p>
-        </div>
-        <div>
-          <h4>Categorias</h4>
-          <p>Camisetas<br />Calças<br />Bonés<br />Headphones<br />Tênis</p>
-        </div>
-        <div style="max-width: 240px">
-          <h4>Contato</h4>
-          <p>
-            Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE,
-            60150-161<br /><br />(85) 3051-3411
-          </p>
-        </div>
+        <div><h4>Digital Store</h4></div>
       </div>
-      <div class="copy">@ 2022 Digital College</div>
+      <div
+        style="
+          text-align: center;
+          margin-top: 20px;
+          border-top: 1px solid #333;
+          padding-top: 20px;
+        "
+      >
+        @ 2022 Digital College
+      </div>
     </footer>
+
+    <!-- CARRINHO -->
+    <div
+      id="cart-modal"
+      style="
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 380px;
+        height: 100%;
+        background: white;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        transition: 0.3s;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+        "
+      >
+        <h3 style="font-weight: 700">Meu Carrinho</h3>
+        <span
+          onclick="fecharCarrinho()"
+          style="font-size: 24px; cursor: pointer; padding: 8px"
+          >✕</span
+        >
+      </div>
+      <div id="cart-items" style="flex: 1; overflow-y: auto"></div>
+      <div style="border-top: 1px solid #eee; padding-top: 16px">
+        <p
+          style="
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 18px;
+          "
+        >
+          <span>Total:</span><span id="cart-total">R$ 0,00</span>
+        </p>
+        <button
+          onclick="finalizarCompra()"
+          style="
+            width: 100%;
+            background: #c92071;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 12px;
+            cursor: pointer;
+          "
+        >
+          Finalizar Compra
+        </button>
+      </div>
+    </div>
+    <div
+      id="cart-overlay"
+      onclick="fecharCarrinho()"
+      style="
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        display: none;
+        z-index: 9998;
+      "
+    ></div>
+
+    <script>
+      const salvo = JSON.parse(localStorage.getItem("drip_carrinho"));
+      let carrinho =
+        salvo && salvo.length > 0
+          ? salvo
+          : [{ nome: "K-Swiss V8", preco: 100, qtd: 2, img: "kswiss.png" }];
+
+      const overlay = document.getElementById("overlay");
+      function atualizarCarrinho() {
+        const lista = document.getElementById("cart-items");
+        const totalEl = document.getElementById("cart-total");
+        const badge = document.querySelector(".cart span");
+        let total = 0;
+        let qtdTotal = 0;
+        lista.innerHTML = "";
+        carrinho.forEach((item, index) => {
+          total += item.preco * item.qtd;
+          qtdTotal += item.qtd;
+          lista.innerHTML += `
+      <div style="display:flex; gap:12px; margin-bottom:16px; align-items:center;">
+        <img src="${item.img}" style="width:60px; height:60px; object-fit:contain; background:#f5f5f5; border-radius:4px;">
+        <div style="flex:1;">
+          <p style="font-size:14px; font-weight:600;">${item.nome}</p>
+          <p style="font-size:14px;">R$ ${item.preco.toFixed(2).replace(".", ",")}</p>
+          <div style="display:flex; gap:8px; align-items:center; margin-top:4px;">
+            <button onclick="mudarQtd(${index}, -1)" style="width:24px; height:24px; border:1px solid #ccc; border-radius:4px; cursor:pointer;">-</button>
+            <span>${item.qtd}</span>
+            <button onclick="mudarQtd(${index}, 1)" style="width:24px; height:24px; border:1px solid #ccc; border-radius:4px; cursor:pointer;">+</button>
+            <span onclick="removerItem(${index})" style="margin-left:12px; color:#c92071; cursor:pointer; font-size:12px;">Remover</span>
+          </div>
+        </div>
+      </div>`;
+        });
+        badge.textContent = qtdTotal;
+        totalEl.textContent = `R$ ${total.toFixed(2).replace(".", ",")}`;
+        // só salva se tiver item, se não, limpa
+        if (carrinho.length > 0) {
+          localStorage.setItem("drip_carrinho", JSON.stringify(carrinho));
+        } else {
+          localStorage.removeItem("drip_carrinho");
+        }
+      }
+
+      function finalizarCompra() {
+        if (carrinho.length === 0) {
+          alert("Seu carrinho tá vazio! Adiciona um tênis aí 😅");
+          return;
+        }
+        const total = carrinho.reduce(
+          (soma, item) => soma + item.preco * item.qtd,
+          0,
+        );
+        alert(
+          `🔥 COMPRA FINALIZADA! 🔥\n\nTotal: R$ ${total.toFixed(2).replace(".", ",")}\n\nObrigado por comprar na Drip Store, ${carrinho.length} produto(s)!\n\n(na vida real aqui ia pro checkout)`,
+        );
+        carrinho = [];
+        localStorage.removeItem("drip_carrinho");
+        atualizarCarrinho();
+        fecharCarrinho();
+      }
+
+      function mudarQtd(i, d) {
+        carrinho[i].qtd += d;
+        if (carrinho[i].qtd <= 0) carrinho.splice(i, 1);
+        atualizarCarrinho();
+      }
+      function removerItem(i) {
+        carrinho.splice(i, 1);
+        atualizarCarrinho();
+      }
+      function adicionarAoCarrinho(p) {
+        const e = carrinho.find((x) => x.nome === p.nome);
+        if (e) e.qtd++;
+        else carrinho.push({ ...p, qtd: 1 });
+        atualizarCarrinho();
+        abrirCarrinho();
+      }
+      function abrirCarrinho() {
+        document.getElementById("cart-modal").style.right = "0";
+        document.getElementById("cart-overlay").style.display = "block";
+      }
+      function fecharCarrinho() {
+        document.getElementById("cart-modal").style.right = "-400px";
+        document.getElementById("cart-overlay").style.display = "none";
+      }
+      document.querySelector(".cart").addEventListener("click", abrirCarrinho);
+      atualizarCarrinho();
+
+      fetch("http://localhost:3000/tenis")
+        .then((r) => r.json())
+        .then((tenis) => {
+          const grid = document.querySelector(".grid");
+          grid.innerHTML = "";
+          tenis.forEach((t) => {
+            grid.innerHTML += `
+              <div class="prod-card" onclick='adicionarAoCarrinho({nome:"${t.nome}", preco:${t.preco}, img:"${t.img}"})'>
+                <div class="prod-img"><span>30% OFF</span><img src="${t.img}" alt="${t.nome}" /></div>
+                <div class="prod-info"><p class="cat">Tênis</p><p class="nome">${t.nome}</p><p class="preco"><del>$200</del><b> R$ ${t.preco.toFixed(2).replace(".", ",")}</b></p></div>
+              </div>`;
+          });
+        })
+        .catch(() => {
+          document.querySelector(".grid").innerHTML =
+            "<p style='grid-column:1/-1; text-align:center;'>Backend desligado - liga o server com 'node server.js'</p>";
+        });
+    </script>
   </body>
 </html>
