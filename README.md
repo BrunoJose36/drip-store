@@ -1,23 +1,26 @@
-# 👟 Drip Store - Digital College
+# 🔥 Drip Store - E-commerce Full-Stack
 
-Projeto de e-commerce desenvolvido para o curso da Digital College.
+Projeto de loja de tênis e streetwear com carrinho funcional e histórico de pedidos!
 
-### 🔗 Links do Projeto
-- **Site no ar (Vercel):** https://drip-store-pi.vercel.app
-- **Deploy extra:** https://drip-store-k42b2y3sn-bruno-df7b.vercel.app
+### 🚀 Link: github.com/BrunoJose36/drip-store
 
-### 🚀 Tecnologias
-- HTML5
-- CSS3
-- Design Responsivo
-- jS
+### ✅ Funcionalidades
 
+- Carrinho que NÃO some mais (LocalStorage)
+- Cálculo de total automático
+- Back-end em Node.js + Express
+- Pedidos salvos em `pedidos.json` (prova real!)
+- Aba "Meus Pedidos" com histórico
 
-### ✨ Funcionalidades
-- Banner Queima de Estoque Nike
-- Cards de produtos (Supreme, Adidas, Beats, Nike)
-- Layout responsivo para mobile
-- CARRINHO COM LOCALSTORE
-- 
+### 🛠️ Tecnologias
 
-Feito por Bruno Jose - Fortaleza/CE
+- HTML / CSS / JavaScript
+- Node.js / Express
+- Git / GitHub
+- LocalStorage API
+
+### 📦 Como rodar
+
+```bash
+npm install
+node server.js
